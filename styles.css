@@ -1,0 +1,132 @@
+body {
+    background-color: rgba(172, 168, 172, 0.13);
+}
+
+main { padding: 0 .5em; }
+
+
+/* Title of 'General Questions' */
+#title {
+    color: #185adb;
+    margin-top: 1.5em;
+    text-align: center;
+    font-family: 'Orelega One', cursive;
+
+    text-transform: capitalize;
+}
+
+
+/* Container of all the questions */
+#div-qa {
+    width: 40em;
+    max-width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+/* Every single question */
+.ask {
+    margin-bottom: 2em;
+    border-radius: .2em;
+    background-color: #fff;
+
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+.ask:hover {
+    box-shadow: 0 .05em .1em #185adb;
+}
+
+
+/* Header of the question and icon */
+.header-question {
+    padding: .5em;
+
+    display: -moz-grid;
+    display: -ms-grid;
+    display: grid;
+
+    grid-template-columns: 80% 20%;
+    align-items: center;
+}
+
+.questions {
+    text-align: left;
+    font-family: 'Thasadith', sans-serif;
+}
+
+
+/* Button & icon */
+.btn {
+    justify-self: end;
+    margin-right: 1em;
+    background-color: transparent;
+    border: none;
+    font-size: 1.2em;
+}
+
+.fas {
+    cursor: pointer;
+    color: #ffc947;
+}
+
+
+/* Hide the answers and its icon */
+.ask .fa-minus { display: none; }
+
+
+.ask .div-answer { display: none; }
+
+
+
+/* Show the answers and its icon */
+.show-answer {
+    box-shadow: 0 .05em .2em #ffc947;
+}
+
+.show-answer .fa-plus { display: none; }
+
+.show-answer .fa-minus { display: block; }
+
+.show-answer .div-answer {
+    display: block;
+    margin: 0 1.2em;
+    padding-top: .7em;
+    text-align: justify;
+    border-top: 1px solid #185adb;
+}
+
+.answers {
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: bolder;
+    padding: .4em .8em 1em;
+}
+.answers::first-letter { margin-left: .8em; }
+
+
+
+@media only screen and (max-width: 574px) {
+    #title { margin-top: .8em; }
+}
+
+@media only screen and (min-width: 768px) {
+    #title { margin-top: 25vh; }
+}
+
+
+
+
+
+
+/* 
+* font-family: 'Orelega One', cursive; para "General Questions"
+
+* font-family: 'Thasadith', sans-serif; para las preguntas
+
+* font-family: 'Libre Franklin', sans-serif; para las respuestas
+
+* <i class="fas fa-minus"></i> para cuando se muestra la respuesta
+ */
